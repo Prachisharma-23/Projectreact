@@ -5,36 +5,35 @@ import './App.css';
 function App() {
 
 
-  let [counter, setCounter] = useState(15)
+  const [counter, setCounter] = useState(15);
   
   //setcounter is method which is used to control counter variable
   //let counter=5
 
+  // const addValue = () =>{
+  //   console.log("Clicked", counter);
+  //   //counter=counter+1
+  //   setCounter(counter => {
+  //     if(counter<20){
+  //       return counter +1;
+  //     }
+  //     else{
+  //       return counter;
+  //     }
+  //   })
+  // }
+
   const addValue = () =>{
-    console.log("Clicked", counter);
-    //counter=counter+1
-    setCounter(counter => {
-      if(counter<20){
-        return counter +1;
-      }
-      else{
-        return counter;
-      }
-    })
-  }
+    setCounter(prevCounter => prevCounter +1);
+    setCounter(prevCounter => prevCounter +1);
+    setCounter(prevCounter => prevCounter +1);
+    setCounter(prevCounter => prevCounter +1);
+  };
 
   const removeValue = () =>{
     console.log("Clicked",counter);
-    setCounter(counter => {
-      if(counter>0){
-        return counter-1;
-      }
-      else{
-        return counter;
-      }
-    }
-    )
-  }
+    setCounter(counter-1);
+  };
 
 
   return (
@@ -48,7 +47,7 @@ function App() {
      <button onClick={removeValue}>Remove value</button>
      <footer>footer: {counter}</footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
